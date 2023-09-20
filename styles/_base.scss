@@ -12,3 +12,28 @@ body {
     background-color: #f8f8f8;
     height: 3000vh;
 }
+
+.section-heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    h2 {
+        font-size: 28px;
+        font-weight: $fwBold;
+        padding: 0 8px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background-color: #cbc4e5;
+            transform: skewX(30deg) rotate(2deg);
+        }
+    }
+}

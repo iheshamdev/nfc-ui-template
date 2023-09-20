@@ -12,6 +12,29 @@ body {
   height: 3000vh;
 }
 
+.section-heading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.section-heading h2 {
+  font-size: 28px;
+  font-weight: 700;
+  padding: 0 8px;
+  position: relative;
+}
+.section-heading h2::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background-color: #cbc4e5;
+  transform: skewX(30deg) rotate(2deg);
+}
+
 #hero {
   position: relative;
   padding: 200px 18px 0;
@@ -46,12 +69,12 @@ body {
   border-radius: 50%;
 }
 #hero h1 {
-  font-size: 26px;
+  font-size: 32px;
   margin-bottom: 8px;
   font-weight: 700;
 }
 #hero h4 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
 }
 #hero .links {
@@ -85,6 +108,15 @@ body {
   color: black;
   font-size: 16px;
   font-weight: 400;
+}
+
+#about {
+  margin-top: 20px;
+  padding: 60px 20px;
+}
+#about p {
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=index.css.map */
