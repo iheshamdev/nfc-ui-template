@@ -15,7 +15,7 @@ body {
 .section-heading {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 .section-heading h2 {
   font-size: 28px;
@@ -111,12 +111,31 @@ body {
 }
 
 #about {
-  margin-top: 20px;
-  padding: 60px 20px;
+  margin-top: 32px;
+  padding: 40px 20px;
 }
 #about p {
   font-size: 18px;
   line-height: 1.5;
+}
+
+#gallery {
+  padding: 40px 20px;
+}
+#gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+#gallery .gallery-grid .gallery-item {
+  height: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 8px;
+}
+#gallery .gallery-grid img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */
