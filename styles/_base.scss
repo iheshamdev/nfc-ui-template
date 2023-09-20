@@ -28,12 +28,18 @@ body {
             content: '';
             position: absolute;
             z-index: -1;
-            bottom: -2px;
+            bottom: 0px;
             left: 0;
             width: 100%;
             height: 12px;
-            background-color: #cbc4e5;
-            transform: skewX(30deg) rotate(2deg);
+            background-color: #c7c9f2;
+            transform: skewX(12deg) rotate(1deg);
         }
     }
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: $textColor;
 }
