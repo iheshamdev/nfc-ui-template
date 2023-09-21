@@ -30,7 +30,7 @@
 
 @media screen and (min-width: $largeScreenBreakPoint) {
     #testimonials {
-        max-width: 600px;
+        max-width: $contentContainerMaxWidth;
         margin: 0 auto;
     }
 }

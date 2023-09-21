@@ -24,7 +24,7 @@
 
 @media screen and (min-width: $largeScreenBreakPoint) {
     #gallery {
-        max-width: $containerMaxWidth;
+        max-width: $wrapperContainerMaxWidth;
         margin: 0 auto;
 
         .gallery-grid {
