@@ -1,6 +1,7 @@
 #hero {
     position: relative;
-    padding: 200px 18px 0;
+    padding: 0 18px;
+    padding-top: 200px;
     text-align: center;
 
     .cover {
@@ -81,6 +82,37 @@
             color: black;
             font-size: 16px;
             font-weight: $fwRegular;
+        }
+    }
+}
+
+@media screen and (min-width: $largeScreenBreakPoint) {
+    #hero {
+        padding-top: 230px;
+
+        .cover {
+            height: 320px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+        }
+
+        .links {
+            grid-template-columns: repeat(auto-fit, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            grid-template-columns: none;
+            grid-auto-flow: column;
+            justify-content: center;
+            align-content: center;
+            row-gap: 32px;
+            column-gap: 32px;
+
+            .icon {
+                width: 58px;
+                height: 58px;
+            }
         }
     }
 }

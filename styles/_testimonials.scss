@@ -27,3 +27,10 @@
         }
     }
 }
+
+@media screen and (min-width: $largeScreenBreakPoint) {
+    #testimonials {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}

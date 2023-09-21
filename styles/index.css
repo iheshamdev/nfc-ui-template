@@ -60,7 +60,7 @@ p {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   background-color: #f8f8f8;
   position: relative;
@@ -116,7 +116,8 @@ p {
 
 #hero {
   position: relative;
-  padding: 200px 18px 0;
+  padding: 0 18px;
+  padding-top: 200px;
   text-align: center;
 }
 #hero .cover {
@@ -191,6 +192,32 @@ p {
   font-weight: 400;
 }
 
+@media screen and (min-width: 600px) {
+  #hero {
+    padding-top: 230px;
+  }
+  #hero .cover {
+    height: 320px;
+  }
+  #hero .logo {
+    width: 200px;
+    height: 200px;
+  }
+  #hero .links {
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-content: center;
+    row-gap: 32px;
+    column-gap: 32px;
+  }
+  #hero .links .icon {
+    width: 58px;
+    height: 58px;
+  }
+}
 #about {
   margin-top: 32px;
   padding: 40px 20px;
@@ -213,17 +240,29 @@ p {
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
 }
-#gallery .gallery-grid .gallery-item {
+#gallery .gallery-item {
   height: 160px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 8px;
 }
-#gallery .gallery-grid img {
+#gallery .gallery-item img {
   width: 100%;
 }
 
+@media screen and (min-width: 600px) {
+  #gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  #gallery .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #gallery .gallery-item {
+    height: 240px;
+  }
+}
 #testimonials {
   padding: 40px 20px;
 }
@@ -250,6 +289,12 @@ p {
   font-weight: 400;
 }
 
+@media screen and (min-width: 600px) {
+  #testimonials {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
 #contact {
   padding: 60px 20px 40px;
   max-width: 100vw;
@@ -302,6 +347,17 @@ p {
 }
 #contact .primary-btn {
   margin-top: 24px;
+}
+
+@media screen and (min-width: 600px) {
+  #contact {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  #contact form {
+    box-shadow: none;
+    background-color: transparent;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

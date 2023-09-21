@@ -64,7 +64,7 @@ p {
 }
 
 .container {
-    max-width: 800px;
+    max-width: $containerMaxWidth;
     margin: 0 auto;
     background-color: #f8f8f8;
     position: relative;
