@@ -1,0 +1,55 @@
+.profile-header {
+    padding: 8px 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 9px rgba(black, 0.12);
+    display: flex;
+
+    .lang-switcher {
+        position: relative;
+
+        .current {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            cursor: pointer;
+
+            img {
+                width: 20px;
+            }
+
+            span {
+                font-size: 16px;
+                font-weight: $fwRegular;
+            }
+        }
+
+        .options {
+            position: absolute;
+            z-index: 9;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 1px 12px rgba(black, 0.12);
+            display: none;
+
+            ul {
+                padding: 8px 0;
+                list-style-type: none;
+            }
+
+            li {
+                padding: 8px 24px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #c7c9f2;
+                }
+            }
+        }
+    }
+}

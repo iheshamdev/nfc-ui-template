@@ -64,7 +64,54 @@ p {
   margin: 0 auto;
   background-color: #f8f8f8;
   position: relative;
-  z-index: -2;
+}
+
+.profile-header {
+  padding: 8px 16px;
+  background-color: #fff;
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.12);
+  display: flex;
+}
+.profile-header .lang-switcher {
+  position: relative;
+}
+.profile-header .lang-switcher .current {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+.profile-header .lang-switcher .current img {
+  width: 20px;
+}
+.profile-header .lang-switcher .current span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.profile-header .lang-switcher .options {
+  position: absolute;
+  z-index: 9;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.12);
+  display: none;
+}
+.profile-header .lang-switcher .options ul {
+  padding: 8px 0;
+  list-style-type: none;
+}
+.profile-header .lang-switcher .options li {
+  padding: 8px 24px;
+  cursor: pointer;
+}
+.profile-header .lang-switcher .options li:hover {
+  background-color: #c7c9f2;
 }
 
 #hero {
@@ -74,7 +121,7 @@ p {
 }
 #hero .cover {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 0;
   left: 0;
   background-image: url("../assets/img/cover.jpeg");
@@ -94,6 +141,8 @@ p {
   align-items: center;
   justify-content: center;
   margin: 0 auto 12px;
+  position: relative;
+  z-index: 2;
 }
 #hero .logo img {
   max-width: 75%;
