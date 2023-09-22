@@ -7,6 +7,10 @@
     .lang-switcher {
         position: relative;
 
+        &:hover .options {
+            display: block;
+        }
+
         .current {
             display: flex;
             align-items: center;
@@ -30,7 +34,7 @@
         .options {
             position: absolute;
             z-index: 9;
-            top: 100%;
+            top: calc(100% + 5px);
             left: 0;
             background-color: #fff;
             border-radius: 6px;

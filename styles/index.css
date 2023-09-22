@@ -8,7 +8,16 @@
 }
 
 body {
-  background-color: #0b0320;
+  padding-bottom: 80px;
+  background-color: #10091D;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%2310091D' cx='50' cy='0' r='50'/%3E%3Cg fill='%23140e24' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%2316122b' cx='50' cy='100' r='50'/%3E%3Cg fill='%23191432' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%231d1739' cx='50' cy='200' r='50'/%3E%3Cg fill='%23201940' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23241b48' cx='50' cy='300' r='50'/%3E%3Cg fill='%23281e4f' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%232c2057' cx='50' cy='400' r='50'/%3E%3Cg fill='%2330235f' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23342566' cx='50' cy='500' r='50'/%3E%3Cg fill='%2339276e' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%233d2a76' cx='50' cy='600' r='50'/%3E%3Cg fill='%23422c7e' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23472e86' cx='50' cy='700' r='50'/%3E%3Cg fill='%234c308e' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23513296' cx='50' cy='800' r='50'/%3E%3Cg fill='%2357349e' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%235c36a7' cx='50' cy='900' r='50'/%3E%3Cg fill='%236238af' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23683AB7' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
+}
+@media screen and (min-width: 600px) {
+  body {
+    padding-bottom: 0;
+  }
 }
 
 .section-heading {
@@ -60,7 +69,7 @@ p {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   background-color: #f8f8f8;
   position: relative;
@@ -75,6 +84,9 @@ p {
 }
 .profile-header .lang-switcher {
   position: relative;
+}
+.profile-header .lang-switcher:hover .options {
+  display: block;
 }
 .profile-header .lang-switcher .current {
   display: flex;
@@ -96,7 +108,7 @@ p {
 .profile-header .lang-switcher .options {
   position: absolute;
   z-index: 9;
-  top: 100%;
+  top: calc(100% + 5px);
   left: 0;
   background-color: #fff;
   border-radius: 6px;
@@ -317,7 +329,7 @@ p {
 
 @media screen and (min-width: 600px) {
   #gallery {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
   }
   #gallery .gallery-grid {
@@ -365,10 +377,6 @@ p {
 }
 #contact > p {
   text-align: center;
-}
-#contact .contact-form-wrapper {
-  position: relative;
-  padding: 32px 0 20px;
 }
 #contact form {
   background-color: rgba(255, 255, 255, 0.4);
@@ -421,6 +429,88 @@ p {
   #contact form {
     box-shadow: none;
     background-color: transparent;
+  }
+}
+.bottom-nav-bar {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  background-color: #683ab7;
+  background-color: #fff;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.12);
+}
+.bottom-nav-bar .nav-item {
+  padding: 8px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  cursor: pointer;
+}
+.bottom-nav-bar .nav-item:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: #f2f2f2;
+  width: 1px;
+  height: 40%;
+  transform: translateY(-50%);
+}
+.bottom-nav-bar .nav-item.menu .icon {
+  background-color: #3C40C6;
+}
+.bottom-nav-bar .nav-item.booking .icon {
+  background-color: #683ab7;
+}
+.bottom-nav-bar .nav-item.whatsapp .icon {
+  background-color: #56ce62;
+}
+.bottom-nav-bar .nav-item.waze .icon {
+  background-color: #33ccff;
+}
+.bottom-nav-bar .icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-nav-bar .icon img {
+  width: 28px;
+}
+.bottom-nav-bar span {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1000px) {
+  .bottom-nav-bar {
+    flex-direction: column;
+    left: auto;
+    bottom: 40px;
+    right: 24px;
+    width: auto;
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 12px 0;
+    gap: 12px;
+    backdrop-filter: blur(5px);
+  }
+  .bottom-nav-bar .nav-item::after {
+    display: none;
+  }
+  .bottom-nav-bar .nav-item span {
+    color: white;
   }
 }
 
